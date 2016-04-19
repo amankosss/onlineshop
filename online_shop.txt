@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Online shop</title>
+		<script type="text/javascript" src="js/script.js" charset="UTF-8"></script>
+		<link href="styles/bootstrap.css" rel="stylesheet">
+		<link href="styles/style.css" rel="stylesheet" >
+		<meta charset="UTF-8">
+	</head>
+		
+	<body >
+		
+		<h3 >Online-shop</h3>
+		<div id='cart'>
+			Items: <span id="cart_items">0</span><br>
+			Total: <span id="cart_total">0</span> KZT<br>
+			<button class="btn" onclick="checkout();" >Checkout</button>
+		</div>
+		<div id="myTable"></div>
+		
+		<div id="main_page">
+			<div class="main_products">
+				<div >
+					<img src="images/good1_1.jpg" onclick="showProduct(0);" >
+					<p>Oodji куртка утепленная<br>16000тг</p>
+				</div>
+				<div >
+					<img src="images/good2_1.jpg" onclick="showProduct(1);" >
+					<p>Ebound футболка<br>6700тг</p>
+				</div>
+				<div >
+					<img src="images/good3_1.jpg" onclick="showProduct(2);" >
+					<p>SELA Куртка утепленная<br>29800тг</p>
+				</div>
+				<div >
+					<img src="images/good4_1.jpg" onclick="showProduct(3);" >
+					<p>RIVER ISLAND куртка джинсовая<br>32000тг</p>
+				</div>
+				<div >
+					<img src="images/good5_1.jpg" onclick="showProduct(4);" >
+					<p>ADIDAS куртка<br>18000тг</p>
+				</div>
+				<div >
+					<img src="images/good6_1.jpg" onclick="showProduct(5);">
+					<p>Deblasio рубажка<br>8000тг</p>
+				</div>
+			</div>
+			<dialog id="dialog">
+	  			<div>
+	  				<p id="product_title"></p>
+	  				<img id="main_pic" src="" width="auto" height="290px">	
+	  			</div>
+				<div class="small_pics">
+	  				<img onmouseover="changePhoto(0);" id="pic_1" src="">	
+	  				<img onmouseover="changePhoto(1);" id="pic_2" src="">	
+	  				<img onmouseover="changePhoto(2);" id="pic_3" src="">	
+	  				<img onmouseover="changePhoto(3);" id="pic_4" src="">	
+	  			</div>
+	  			<div>Size:
+		  			<select id="selected_size">
+						<option value ="S" > S </option>
+						<option value ="M" > M </option>
+						<option value ="L" > L </option>
+						<option value ="XL" > XL </option>
+						<option value ="XXL" > XXL </option>
+					</select>
+					&emsp;Quantity:<input id="selected_quantity" type="number" value="1" ></input>
+				</div>
+				<p id="product_description" > &emsp; Демисезонная куртка oodji выполнена из быстросохнущего нейлона , синтепоновый утеплитель. Детали: прямой крой; застежка на молнию; боковые карманы на молнии.</p>
+	  			<button class="btn btn-danger" onclick="closeProduct();">Close</button>
+				<button class="btn btn-primary" onclick="addProduct();">Buy</button>
+
+			</dialog>
+		</div>
+	</body>
+
+</html>
